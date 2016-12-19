@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <title></title>
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/stylesheets/app.min.css">
+    <!-- endinject -->
+</head>
+<body>
+<!-- loading -->
+<div id="loading">
+    <div class="loading_carot"></div>
+    <div class="loading_bg"></div>
+    <div class="loading_bg_mask"></div>
+
+    <div class="cont-wrap">
+        <div id="cont" data-pct="0">
+            <svg id="svg" width="60" height="60" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle r="35" cx="50" cy="50" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                <circle id="bar" r="35" cx="50" cy="50" fill="transparent"
+                        stroke-dasharray="565.48" stroke-dashoffset="0" style="stroke-dashoffset: 565.487px;"></circle>
+            </svg>
+
+            <div class="tips">
+                <div class="inner"></div>
+            </div>
+
+            <div class="clickTips">点击启动</div>
+        </div>
+    </div>
+
+    <div class="loading_mark"></div>
+</div>
+<!-- end loading -->
+
+
+<div id="container">
+    <div class="world-wrap">
+        <div id="world" style="height: 100%;">
+            <div id="canvas" class="content">
+                <!-- scene01 -->
+                <div id="scene01" class="scene active">
+                    <div class="carot sprite_scene01"></div>
+                </div>
+                <!-- end scene01 -->
+
+                <!-- scene02 -->
+                <div id="scene02" class="scene">
+                    <div class="carot sprite_scene02"></div>
+                </div>
+                <!-- end scene02 -->
+
+                <!-- scene03 -->
+                <div id="scene03" class="scene">
+                    <div class="carot sprite_scene03"></div>
+                </div>
+                <!-- end scene03 -->
+
+                <!-- scene04 -->
+                <div id="scene04" class="scene">
+                    <div class="carot sprite_scene04"></div>
+                </div>
+                <!-- end scene04 -->
+
+                <!-- scene05 -->
+                <div id="scene05" class="scene">
+                    <div class="carot sprite_scene05"></div>
+                </div>
+                <!-- end scene05 -->
+
+                <!-- scene06 -->
+                <div id="scene06" class="scene">
+                    <div class="carot sprite_scene06"></div>
+                </div>
+                <!-- end scene06 -->
+
+                <!-- scene07 -->
+                <div id="scene07" class="scene">
+                    <div class="carot sprite_scene07"></div>
+                </div>
+                <!-- end scene07 -->
+
+                <!-- scene11 -->
+                <div id="scene11" class="scene">
+                    <div class="carot sprite_scene11"></div>
+                </div>
+                <!-- end scene11 -->
+
+                <!-- scene12 -->
+                <div id="scene12" class="scene">
+                    <div class="carot sprite_scene12"></div>
+                </div>
+                <!-- end scene12 -->
+
+                <!-- scene13 -->
+                <div id="scene13" class="scene">
+                    <div class="carot sprite_scene13"></div>
+                </div>
+                <!-- end scene13 -->
+
+                <!-- scene14 -->
+                <div id="scene14" class="scene">
+                    <div class="carot sprite_scene14"></div>
+                </div>
+                <!-- end scene14 -->
+
+                <!-- scene15 -->
+                <div id="scene15" class="scene">
+                    <div class="carot sprite_scene15"></div>
+                </div>
+                <!-- end scene15 -->
+
+                <!-- scene16 -->
+                <div id="scene16" class="scene">
+                    <div class="carot sprite_scene16"></div>
+                </div>
+                <!-- end scene16 -->
+
+                <!-- scene17 -->
+                <div id="scene17" class="scene">
+                    <div class="carot sprite_scene17"></div>
+                </div>
+                <!-- end scene17 -->
+
+                <!-- scene18 -->
+                <div id="scene18" class="scene">
+                    <div class="carot sprite_scene18"></div>
+                </div>
+                <!-- end scene18 -->
+
+                <!-- common sprites -->
+                <div class="room"></div>
+                <div class="room_orange02"></div>
+                <div class="room_green02"></div>
+                <div class="spider"></div>
+                <div class="mask2"></div>
+                <!-- end common sprites -->
+            </div>
+
+            <div id="canvas2">
+                <!-- scene18 -->
+                <div id="scene08" class="scene">
+                    <div class="scene08"></div>
+                </div>
+                <!-- end scene18 -->
+
+                <!-- common sprites -->
+                <div class="room"></div>
+                <!-- end common sprites -->
+            </div>
+
+            <img id="decode" src="" alt="" style="display: none;"/>
+
+            <!-- touch area -->
+            <div id="touch-area"></div>
+            <!-- end touch area -->
+
+            <!-- end common sprites -->
+            <div class="face"></div>
+            <div class="mask"></div>
+            <div class="finger"></div>
+            <div class="boom-tips">
+                <div class="tips">
+                    <div class="inner"></div>
+                </div>
+
+                <p class="txt">点击破坏墙壁</p>
+            </div>
+            <!-- common sprites -->
+        </div>
+        <div class="bg-color"></div>
+    </div>
+
+    <!-- share -->
+    <div class="share">
+        <div class="share-btn">
+            <button></button>
+        </div>
+    </div>
+
+    <div class="share-tips"></div>
+
+    <style type="text/css">
+        .share-tips {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.8) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAAGDCAMAAABDQWXhAAAAqFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8j1z1tAAAAN3RSTlMAA/gG9EApyZlv7eNoOQ4Jshz8IxUR2cGiiYEv0HaEY+i4jnxUNK2UUBkL3dS9XqhaIPGdTUlF/4clyAAACV9JREFUeNrs3ctaGkEQhuFiGDkGUYQRxBOCICgQgfjf/52l+zEgmOyyq/7e1cy+F93Vf1cZAAAAAAAAAAAAAAAAAAAAAAAAAPyf3mo2NCAJw460Yb0jDU8KHq8MSEBT0WvXAPee9en23ADv7vXHddsA5wrtTUsGuFZR8FZVtDXAtbGCcfdN0cAAz24VVOyyqahugF9XCoq4qWkoWhng1t1hD9PKFXR+GeBVVcGzRR+ZgrxlgE9zBU37NOkoaBCfgVN1BU8nf2q+G+DRUsGZ7d0oKojPwKNuR9JjyQ5mxGfg1oOCmn0prRUtywZ4M1LwYUfKS+Iz8Ok8k9Qo27FFVVHNAF9W/8qFdQtF9wa4MlWws1P7+MyDAY4sMkl52Y6Uhj/6hRR1DHBkomBte/OXwXWuLwsD/FgrmMSvdqu+bupUg2IkHClvJGWLq5+zaqbvRjtersKTnYL8Ud817yosdXiz1d+2Zz0umOBRQ0eoPcI3HWSD1vlO0swAp0aKlpN5yYKupKoBTvVq9WH7pFVkxr4dibiQxLs9JOKGthtIxwtdxJCOXkYlEuk4295xVAUAAAAAAAAAAAAAAEBiKv0akwyQilupb0AaNlJhQBoKKTcgDdeSegYkoS+pYkASBpIYEo9E1Gmch3RMJI0NSEKLkXtIx7ukqQFJaNMWFQnJuVZFOl6ljQFpqEpiLhMScSHp0vCbvXtLiTMKggDcGP+oDzORhCQ6gxdGxFHBG2rtf2e6j/q+NZyH5tDVRYXjJLcDFS6TLAMVbn/nej3QYXtldAcAAAAAAAAAoMvf08eTgQ438h302CVZDVQ4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') no-repeat;
+            background-size: 100%;
+            transition: all 1.4s;
+        }
+        .share-tips.active {
+            opacity: 1;
+            z-index: 1000;
+        }
+    </style>
+    <script>
+        //  bind share layout buttons
+        var shareButton = document.getElementsByClassName('share-btn')[0];
+
+        var shareTimer;
+        shareButton.addEventListener('touchstart', function (e) {
+            e.stopPropagation();
+            document.getElementsByClassName('share-tips')[0].className += ' active';
+
+            setTimeout(shareTimer);
+            shareTimer = setTimeout(function () {
+                document.getElementsByClassName('share-tips')[0].className = document.getElementsByClassName('share-tips')[0].className.replace(/active/g, '');
+            }, 1700);
+        });
+
+        document.getElementsByClassName('share-tips')[0].addEventListener('touchstart', function (e) {
+            e.stopPropagation();
+            document.getElementsByClassName('share-tips')[0].className = document.getElementsByClassName('share-tips')[0].className.replace(/active/g, '');
+        });
+    </script>
+    <!-- end share -->
+</div>
+
+<div class="subtitle">
+    <p class="chs"></p>
+    <p class="eng"></p>
+</div>
+
+<audio id="audio" src=""></audio>
+<!-- inject:js -->
+<script src="assets/scripts/app.min.js"></script>
+<!-- endinject -->
+</body>
+</html>
